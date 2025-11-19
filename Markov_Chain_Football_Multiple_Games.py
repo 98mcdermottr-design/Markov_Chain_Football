@@ -14,6 +14,7 @@ def match_events(events_prob):
     next_event = x
     while len(events) < 90:
         next_event = np.random.choice(events_prob.index, p = events_prob.iloc[events_prob.index.get_loc(next_event)])
+        # generate next result, by finding probabilities for latest result get_loc(result)
         events.append(next_event)
         if next_event == "SCORE GOAL":
             home_goals += 1
@@ -26,10 +27,12 @@ losses = 0
 draws = 0
 N = 100
 for i in range (N):
+# this loop runs the monte carlo simulation, so we can assess what the expected season result should look like
     season_wins = 0
     season_draws = 0
     season_losses = 0
     for j in range(38):
+    # this loop turns the above into a sequence of 38 games, to find the expected season result
         home_goals, away_goals = match_events(events_prob)
         if home_goals > away_goals:
             season_wins += 1

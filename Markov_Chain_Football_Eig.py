@@ -6,7 +6,7 @@ import random
 mc_array = np.array([[0.25, 0.25, 0.5],
                 [0.1, 0.75, 0.15],
                 [1/3, 1/3, 1/3]])
-
+# start with the conditional probability matrix in numpy array format
 def matrix_power(matrix, power):
     if power == 0:
         return np.identity(len(matrix))

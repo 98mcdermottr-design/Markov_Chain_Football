@@ -1,5 +1,5 @@
-# Markov_Chain_Football
-Series of Markov Chains in Python to analyse football matches.
+# Markov Chains Applied in Sports Analytics
+A series of Python scripts demonstrating Markov chain models applied to football matches.
 
 --- 
 
